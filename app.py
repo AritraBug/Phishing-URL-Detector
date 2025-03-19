@@ -8,6 +8,8 @@ import pandas as pd
 import numpy as np
 from dotenv import load_dotenv
 import json
+import streamlit as st
+
 
 load_dotenv()
 
@@ -130,3 +132,10 @@ def get_risk_level(probability):
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5001))
     app.run(host='0.0.0.0', port=port, debug=True)
+
+@app.route("/")
+def home():
+    return "Hello, Railway!"
+
+if __name__ == "__main__":
+    app.run()
