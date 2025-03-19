@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Phishing URL Detector</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">Phishing URL Detector</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h1 class="card-title">About This Project</h1>
+                        
+                        <h2 class="mt-4">What is Phishing?</h2>
+                        <p>Phishing is a type of cyber attack where attackers attempt to trick users into revealing sensitive information such as passwords, credit card numbers, or personal data. Phishing attacks often involve malicious websites that mimic legitimate ones, tricking users into entering their credentials.</p>
+                        
+                        <h2 class="mt-4">How Does This Detector Work?</h2>
+                        <p>This phishing URL detector uses machine learning to analyze various features of a URL and determine if it's likely to be a phishing site. The detector extracts features such as:</p>
+                        <ul>
+                            <li>URL length and structure</li>
+                            <li>Domain age and registration information</li>
+                            <li>Presence of suspicious keywords</li>
+                            <li>Use of URL shortening services</li>
+                            <li>SSL certificate validity</li>
+                            <li>Presence of login forms</li>
+                            <li>And many more...</li>
+                        </ul>
+                        
+                        <p>The detector also integrates with Google Safe Browsing API to check if a URL has been previously reported as malicious.</p>
+                        
+                        <h2 class="mt-4">How to Stay Safe</h2>
+                        <p>Even with tools like this, it's important to practice good cybersecurity habits:</p>
+                        <ul>
+                            <li>Be cautious of unexpected emails or messages asking for personal information</li>
+                            <li>Check the URL in your browser's address bar before entering sensitive information</li>
+                            <li>Look for HTTPS and a padlock icon in your browser</li>
+                            <li>Use password managers to avoid manually entering credentials</li>
+                            <li>Keep your software and browsers updated</li>
+                        </ul>
+                        
+                        <h2 class="mt-4">Technology Stack</h2>
+                        <p>This project is built using:</p>
+                        <ul>
+                            <li>Python with Flask for the backend</li>
+                            <li>Scikit-learn for machine learning</li>
+                            <li>Bootstrap for the frontend</li>
+                            <li>Google Safe Browsing API for additional checks</li>
+                        </ul>
+                        
+                        <h2 class="mt-4">Disclaimer</h2>
+                        <p>This tool provides a risk assessment based on machine learning analysis and should be used as one of many security measures. No detection system is 100% accurate, and users should always exercise caution when visiting websites.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 py-3 bg-light">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 Phishing URL Detector | Powered by Machine Learning</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
